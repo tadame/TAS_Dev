@@ -6,3 +6,39 @@
 
 # Ignore compiled files
 *.pyc
+
+# Ignore QT.py files
+Common/Qt_py_master/tests.py
+Common/Qt_py_master/test_docker.sh
+Common/Qt_py_master/setup.py
+Common/Qt_py_master/setup.cfg
+Common/Qt_py_master/run_tests.py
+Common/Qt_py_master/run_docker.sh
+Common/Qt_py_master/membership.py
+Common/Qt_py_master/logo.svg
+Common/Qt_py_master/examples/loadUi/qwidget.ui
+Common/Qt_py_master/examples/loadUi/baseinstance2.py
+Common/Qt_py_master/examples/loadUi/baseinstance1.py
+Common/Qt_py_master/examples/loadUi/__init__.py
+Common/Qt_py_master/examples/loadUi/README.md
+Common/Qt_py_master/examples/__init__.py
+Common/Qt_py_master/examples/README.md
+Common/Qt_py_master/examples/QtSiteConfig/main.py
+Common/Qt_py_master/examples/QtSiteConfig/__init__.py
+Common/Qt_py_master/examples/QtSiteConfig/README.md
+Common/Qt_py_master/examples/QtSiteConfig/QtSiteConfig.py
+Common/Qt_py_master/entrypoint.sh
+Common/Qt_py_master/caveats.py
+Common/Qt_py_master/build_membership.sh
+Common/Qt_py_master/build_docker.sh
+Common/Qt_py_master/build_caveats.py
+Common/Qt_py_master/README.md
+Common/Qt_py_master/LICENSE
+Common/Qt_py_master/Dockerfile.vfxplatform2018
+Common/Qt_py_master/Dockerfile.vfxplatform2017
+Common/Qt_py_master/DOCKER.md
+Common/Qt_py_master/CONTRIBUTING.md
+Common/Qt_py_master/CAVEATS.md
+Common/Qt_py_master/.travis.yml
+Common/Qt_py_master/.hound.yml
+Common/Qt_py_master/.gitignore

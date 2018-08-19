@@ -1,0 +1,7 @@
+<ToolInfo>
+	<Name>GPU Cache Switch</Name>
+	<Department>Animation</Department>
+	
+	<ToolHelp>Creates GPU Cache for references in scene</ToolHelp>
+	<Description>Creates GPU Cache for references in scene locally</Description>
+</ToolInfo>
