@@ -1,3 +1,4 @@
+rem Example file to mount files in Windows at startup
 if exist j:\ (
     net use j: /delete
 )
