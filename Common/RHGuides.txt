@@ -1,0 +1,60 @@
+# Enable EPEL via DNF
+dnf install epel-release
+
+# Enable EPEL via RPM
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm (Change 8 to 7)
+
+# Install Nvidia Driver
+'/home/tadame/Downloads/NVIDIA-Linux-x86_64-418.74.run' 
+
+# Update Firefox
+# wget -O- "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" | tar -jx -C /usr/local/
+# Backup current Firefox 
+$ mv /usr/bin/firefox /usr/bin/backup_firefox
+# Exclude firefox from updating.
+$ echo "exclude=firefox" >> /etc/dnf/dnf.conf
+# Create a symlink to a newly downloaded /usr/local/firefox/firefox executable.
+$ ln -s /usr/local/firefox/firefox /usr/bin/firefox
+
+#OhMyZSH
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+Follow this:
+https://threadsec.wordpress.com/linux-zsh-theme-perso-agnoster/
+
+# Install Tools.
+flatpak install flathub org.remmina.Remmina
+flatpak install flathub org.godotengine.Godot
+flatpak install flathub com.skype.Client  
+flatpak install flathub org.gnome.clocks
+flatpak install flathub com.spotify.Client
+flatpak install flathub com.github.marktext.marktext
+
+# Install VSCode
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+dnf check-update
+sudo dnf install code
+
+flatpak install flathub com.visualstudio.code
+flatpak install flathub com.jetbrains.PyCharm-Community
+
+
+yum install p7zip
+yum install ntfs-3g
+
+
+# Install Chrome
+Download the Google Chrome RPM package from the official Google Chrome download page.
+Use the GUI software install application or...
+$ cd Downloads/
+$ ls
+google-chrome-stable_current_x86_64.rpm
+$ su
+Password: 
+# dnf install google-chrome-stable_current_x86_64.rpm
+
+# Install Blender 2.8
+$ tar xvjf '/home/tadame/Downloads/blender-2.80-3dc9da3a74ee-linux-glibc224-x86_64.tar.bz2'
+$ mv blender-2.80-3dc9da3a74ee-linux-glibc224-x86_64/ /usr/local/blender-2.80/
+$ sudo ln -s /usr/local/blender-2.80/blender /usr/bin/blender
+$ blender
