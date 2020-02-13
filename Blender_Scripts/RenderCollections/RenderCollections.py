@@ -1,3 +1,4 @@
+import os
 import bpy
 
 OPTIONS = ["A", "B", "C", "D", "E", "F", "G", "H"]
@@ -69,7 +70,7 @@ def render_options(options):
     switch_2_defaults()
     for option in options:
         options_switch(option, False)
-        filepath = f"ProjectPath\\Renders\\RAW_Renders\\Scene_V01{option}-####.exr"
+        filepath = os.path.join("ProjectPath", "Renders", "RAW_Renders", f"Scene_V01{option}-####.exr")
         bpy.context.scene.render.filepath = filepath
         file_subpath = f"Scene_V01{option}-####.png"
         bpy.context.scene.node_tree.nodes['File Output'].file_slots[0].path = file_subpath
