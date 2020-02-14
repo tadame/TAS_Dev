@@ -69,9 +69,10 @@ def render_options(options):
     switch_2_defaults()
     for option in options:
         options_switch(option, False)
-        filepath = os.path.join("ProjectPath", "Renders", "RAW_Renders", f"Scene_V01{option}-####.exr")
+        project_path = os.path.abspath(r"C:\Users\<YourUserName>\<My_Project>")
+        filepath = os.path.join(project_path, "Renders", "RAW_Renders", f"Scene_V01{option}-####.exr")
         bpy.context.scene.render.filepath = filepath
-        base_path = os.path.join("ProjectPath", "Renders", "Renders")
+        base_path = os.path.join(project_path, "Renders", "Comp_Renders")
         file_subpath = f"Scene_V01{option}-####.png"
         bpy.context.scene.node_tree.nodes['File Output'].base_path = base_path
         bpy.context.scene.node_tree.nodes['File Output'].file_slots[0].path = file_subpath
