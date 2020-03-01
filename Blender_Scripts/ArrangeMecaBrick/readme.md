@@ -53,19 +53,19 @@ Lego_GRP
 ## Screengrabs
 
 The file imported has non-descriptive part names and non-understandable names on the shaders, making it hard to work with the file as is.
-![Alt text](arrange_0-import_web.PNG?raw=true "Imported file")
+![Alt text](images/arrange_0-import_web.PNG?raw=true "Imported file")
 *Imported file*
 
 The first step is to rename the shaders accordingly manually. A bit tidious, so if you don't want to do it... it will work but you will have weird names. Once it's done it's time to run the tool.
-![Alt text](arrange_1-import_web.PNG?raw=true "Cleaned shader names")
+![Alt text](images/arrange_1-import_web.PNG?raw=true "Cleaned shader names")
 *Cleaned shader names*
 
 Load the script to run it in the script editor.
-![Alt text](arrange_2-import_web.PNG?raw=true "Load Script")
+![Alt text](images/arrange_2-import_web.PNG?raw=true "Load Script")
 *Load Script*
 
 The final result once the tool is executed is a tree structure in the outliner.
-![Alt text](arrange_3-import_web.PNG?raw=true "Final scene")
+![Alt text](images/arrange_3-import_web.PNG?raw=true "Final scene")
 *Final scene*
 
 If you want to keep the materials linked in the scene you just need to change the variable value to "False".
