@@ -1,6 +1,11 @@
 import bpy
 
 
+LEGO_GROUP = "Lego_GRP"
+PIECE_NAME = "Piece"
+CLEAN_MATERIALS = True
+
+
 def get_materials():
     """Get Materials in scene & objects.
     """
@@ -24,24 +29,29 @@ def create_default_material():
     return default_grey
 
 
+def clean_materials(purge, piece, shd):
+    if purge:
+        piece.data.materials.clear()
+        piece.data.materials.append(shd)
+
+
 def create_collections():
     """Create collections and add items
     """
     gather = get_materials()
+    default_grey = create_default_material()
     default_collection = bpy.data.collections.items()[0][1]
-    lego_collection = bpy.data.collections.new("Lego_GRP")
+    lego_collection = bpy.data.collections.new(LEGO_GROUP)
     bpy.context.scene.collection.children.link(lego_collection)
     for mat in gather.keys():
-        collection = bpy.data.collections.new(mat.name)
+        collection = bpy.data.collections.new(f"{mat.name}_GRP")
         bpy.context.scene.collection.children.link(collection)
         lego_collection.children.link(collection)
         for item in gather.get(mat):
             default_collection.objects.unlink(item)
             collection.objects.link(item)
-            item.name = f"Piece_{mat.name}"
-            default_grey = create_default_material()
-            item.data.materials.clear()
-            item.data.materials.append(default_grey)
+            item.name = f"{PIECE_NAME}_{mat.name}"
+            clean_materials(CLEAN_MATERIALS, item, default_grey)
 
 
 if __name__ == "__main__":
